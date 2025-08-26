@@ -7,7 +7,7 @@ describe('login-and-start-work', () => {
     const dashboardPage = new DashboardPage()
 
     before('login', function () {
-        cy.visit('http://localhost:3000/login-card');
+        cy.visit(EnvEnum.BASE_URL);
     })
 
     it('login and start work', () => {

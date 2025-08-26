@@ -21,6 +21,7 @@ export class LoginPage {
     public clickLoginButton(): LoginPage {
         this.element.getLoginButton().click()
         cy.url().should('contain', '/dashboard')
+        cy.get('mat-spinner').should('not.exist')
         return this;
     }
 }

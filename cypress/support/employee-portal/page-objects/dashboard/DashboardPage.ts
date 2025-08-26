@@ -5,12 +5,14 @@ export class DashboardPage {
 
     public clickOnStartWorkAction(): DashboardPage {
         this.element.getGivenActionButton("Początek pracy").click()
+        cy.get('mat-spinner').should('not.exist')
         cy.get('.mat-simple-snackbar').contains('Zarejestrowano zdarzenie rozpoczęcia pracy').should('be.visible');
         return this;
     }
 
     public clickOnEndWorkAction(): DashboardPage {
         this.element.getGivenActionButton("Koniec pracy").click()
+        cy.get('mat-spinner').should('not.exist')
         cy.get('.mat-simple-snackbar').contains('Zarejestrowano zdarzenie zakończenia pracy').should('be.visible');
         return this;
     }
