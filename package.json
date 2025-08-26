@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress": "npx cypress open"
+    "cypress": "npx cypress open",
+    "start": "npx cypress run --spec cypress/e2e/login-and-start-work.cy.ts",
+    "end": "npx cypress run --spec cypress/e2e/login-and-end-work.cy.ts"
   },
   "keywords": [],
   "author": "",
