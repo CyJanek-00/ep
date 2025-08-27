@@ -3,7 +3,7 @@ name: start
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 5 * * 1-5'
+    - cron: '22 5 * * 1-5'
 
 jobs:
   run-tests:
